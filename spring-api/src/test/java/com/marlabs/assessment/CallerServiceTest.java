@@ -1,0 +1,3 @@
+package com.marlabs.assessment;
+import com.marlabs.assessment.config.CallerProperties; import com.marlabs.assessment.service.CallerService; import org.junit.jupiter.api.Test; import java.util.Map; import static org.junit.jupiter.api.Assertions.*;
+class CallerServiceTest { @Test void knownCaller(){var p=new CallerProperties(Map.of("atlas-employee-01",new CallerProperties.Caller("Atlas","employee"))); assertEquals("Atlas",new CallerService(p).require("atlas-employee-01").tenant());} @Test void unknownCallerRejected(){var p=new CallerProperties(Map.of()); assertThrows(RuntimeException.class,()->new CallerService(p).require("fake"));} }

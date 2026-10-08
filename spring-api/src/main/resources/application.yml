@@ -1,0 +1,14 @@
+server:
+  port: 8080
+spring:
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 20MB
+assessment:
+  python-service-url: ${PYTHON_SERVICE_URL:http://127.0.0.1:8001}
+  client-timeout-ms: ${CLIENT_TIMEOUT_MS:3000}
+  callers:
+    atlas-employee-01: { tenant: Atlas, role: employee }
+    atlas-contractor-01: { tenant: Atlas, role: contractor }
+    boreal-employee-01: { tenant: Boreal, role: employee }

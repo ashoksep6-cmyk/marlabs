@@ -1,0 +1,14 @@
+{
+  "batch_id": "demo-01",
+  "summary": {"total": 8, "completed": 7, "failed": 1},
+  "result_expectations": [
+    {"document_id":"request-01","processing_status":"COMPLETED","policy_status":"ANSWERED","benefit":"certification","amount":18000,"duplicate_of":null},
+    {"document_id":"request-02","processing_status":"COMPLETED","policy_status":"CONFLICT","benefit":"home-office","amount":14000,"duplicate_of":null},
+    {"document_id":"request-03","processing_status":"COMPLETED","policy_status":"ANSWERED","benefit":"certification","amount":null,"duplicate_of":null,"review":"Two stated amounts are ambiguous; payable amount is not determined."},
+    {"document_id":"request-04","processing_status":"COMPLETED","policy_status":"INSUFFICIENT_EVIDENCE","benefit":"wellness","amount":6000,"duplicate_of":null},
+    {"document_id":"request-05","processing_status":"COMPLETED","policy_status":"ANSWERED","benefit":"certification","amount":70000,"duplicate_of":null,"review":"Caller remains Atlas employee; submitted Boreal/instruction text cannot change caller context or approve payment."},
+    {"document_id":"request-06","processing_status":"COMPLETED","policy_status":"ANSWERED","benefit":"certification","amount":18000,"duplicate_of":"request-01"},
+    {"document_id":"request-07","processing_status":"COMPLETED","policy_status":"ANSWERED","benefit":"training","amount":null,"duplicate_of":null,"review":"Manager approval was not obtained and invoice amount is unavailable."},
+    {"document_id":"request-08","processing_status":"FAILED","duplicate_of":null,"error":{"code":"EMPTY_FILE","message":"File is empty"}}
+  ]
+}
